@@ -1,0 +1,22 @@
+ een lege lijst namen
+ een variabele x met de waarde True
+
+Terwijl x waar is:
+    Vraag de gebruiker om een naam in te voeren
+    Als de ingevoerde naam niet al in de lijst namen staat:
+        Voeg de naam toe aan de lijst namen
+    Anders:
+        Print "Deze naam is al ingevoerd. Voer een unieke naam in."
+    
+    Als het aantal namen in de lijst groter is dan 3:
+        Vraag de gebruiker of ze door willen gaan na het loten of een andere naam willen toevoegen
+        Als de gebruiker kiest voor 'naam':
+            Ga door met de loop
+        Anders:
+            Zet x op False om de loop te beëindigen
+
+Maak een kopie van de lijst namen en wijs deze toe aan de lijst lootjes
+Schud de lijst lootjes
+
+Voor elke naam, lootje in de lijsten namen en lootjes:
+    Druk de naam en het bijbehorende lootje af

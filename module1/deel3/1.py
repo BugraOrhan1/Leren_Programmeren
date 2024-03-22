@@ -1,0 +1,18 @@
+print('********************************************************************')
+print('* er worden u een aantal relevante vragen gesteld                  *')
+print('* gelieve die naar eer en geweten in te vullen                     *')
+print('* als blijkt dat u aan de criteria voldoet dan komt                *')
+print('* u in aan merking voor een serieus sollicitattiegesprek           *')
+print('* ontspan maar blijf wakker, hier komen de vragen                  *')
+print('********************************************************************')
+naam = input('wat is uw naam?')
+lengte = input('wat is uw netto lichaamslengte in hele cm, dus exclusief uw kapsel?')
+gewicht = input('wat is uw lichaamsgewicht in hele kg?')
+sport = input('hoeveel uur (afgerond) per week beoefent u een fysieke sport?')
+opruimerig = input('hoe opruimerig scha u uzelf op een schaal van 1 (niet) tot 5 (obessief) ?')
+vliegbrevet = input('bezit u een vliegrevet? (J/N)')
+aarde = input('is volgens u de aarde plat (J/N)')
+ruimte = input('hoeveel ruimte heeft u nodig om u heen op een schaal van 1 (niet) tot 5(veel)?')
+print(f'beste {naam}')
+print
+
