@@ -1,28 +1,44 @@
 import time
 from termcolor import colored
-from data import JOURNEY_IN_DAYS
+from data import JOURNEY_IN_DAYS , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY
 
 ##################### O03 #####################
 
-def copper2silver(amount:int) -> float:
-    pass
+def copper2silver(amount: int) -> float:
+    return amount / 10
 
-def silver2gold(amount:int) -> float:
-    pass
+def silver2gold(amount: int) -> float:
+    return amount / 5
 
-def copper2gold(amount:int) -> float:
-    pass
+def copper2gold(amount: int) -> float:
+    silver_amount = copper2silver(amount)
+    gold_amount = silver2gold(silver_amount)
+    return gold_amount
 
-def platinum2gold(amount:int) -> float:
-    pass
+def platinum2gold(amount: int) -> float:
+    return amount * 25
 
-def getPersonCashInGold(personCash:dict) -> float:
-    pass
+def getPersonCashInGold(personCash: dict) -> float:
+    total_gold = 0
+    if 'copper' in personCash:
+        total_gold += copper2gold(personCash['copper'])
+    if 'silver' in personCash:
+        total_gold += silver2gold(personCash['silver'])
+    if 'gold' in personCash:
+        total_gold += personCash['gold']
+    if 'platinum' in personCash:
+        total_gold += platinum2gold(personCash['platinum'])
+    return total_gold
+
 
 ##################### O05 #####################
-
-def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    pass
+def getJourneyFoodCostsInGold(people: int, horses: int) -> float:
+    kosten_perdag_copper = (people * COST_FOOD_HUMAN_COPPER_PER_DAY) + (horses * COST_FOOD_HORSE_COPPER_PER_DAY)
+    hele_reis_kosten = kosten_perdag_copper * JOURNEY_IN_DAYS
+    totaal_in_goud = hele_reis_kosten/50
+    
+    
+    return totaal_in_goud
 
 ##################### O06 #####################
 
