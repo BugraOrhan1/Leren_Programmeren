@@ -8,7 +8,7 @@ from data import JOURNEY_IN_DAYS
 #schrijf je test hier
 expected = 11
 result = JOURNEY_IN_DAYS
-test('copper2silver - test 1',expected, result)
+test('JOURNEY_IN_DAYS - test 1',expected, result)
 
 if __name__ == "__main__":
     report()
